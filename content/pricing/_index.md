@@ -6,3 +6,4 @@ description: "Przejrzyste ceny usług fotograficznych DeaPrint. Konkurencyjne st
 # Cennik Usług
 
 Oferujemy konkurencyjne ceny przy zachowaniu najwyższej jakości usług.
+Cennik w przygotowaniu
