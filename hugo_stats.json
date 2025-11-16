@@ -1,0 +1,31 @@
+{
+  "htmlElements": {
+    "tags": [
+      "body",
+      "button",
+      "div",
+      "h1",
+      "head",
+      "html",
+      "link",
+      "meta",
+      "p",
+      "script",
+      "title"
+    ],
+    "classes": [
+      "bg-base-200",
+      "btn",
+      "btn-primary",
+      "font-bold",
+      "hero",
+      "hero-content",
+      "max-w-md",
+      "min-h-screen",
+      "py-6",
+      "text-5xl",
+      "text-center"
+    ],
+    "ids": null
+  }
+}

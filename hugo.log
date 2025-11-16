@@ -1,0 +1,23 @@
+Watching for changes in /home/devlin/src/github/dea-web/{archetypes,assets,content,data,i18n,layouts,package.json,postcss.config.js,static,tailwind.config.js}
+Watching for config changes in /home/devlin/src/github/dea-web/hugo.toml
+Start building sites … 
+hugo v0.152.2-6abdacad3f3fe944ea42177844469139e81feda6+extended linux/amd64 BuildDate=2025-10-24T15:31:49Z VendorInfo=snap:0.152.2
+
+WARN  found no layout file for "html" for kind "taxonomy": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+
+                  │ EN 
+──────────────────┼────
+ Pages            │  5 
+ Paginator pages  │  0 
+ Non-page files   │  0 
+ Static files     │  0 
+ Processed images │  0 
+ Aliases          │  0 
+ Cleaned          │  0 
+
+Built in 1561 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 0.0.0.0) 
+Press Ctrl+C to stop
