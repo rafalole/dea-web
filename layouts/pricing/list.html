@@ -1,0 +1,183 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-12">
+    <!-- Page Header -->
+    <div class="text-center mb-16">
+        <h1 class="text-5xl font-bold mb-4">{{ .Title }}</h1>
+        <p class="text-xl text-base-content/70 max-w-3xl mx-auto">{{ .Description }}</p>
+    </div>
+    
+    {{ if .Content }}
+    <div class="prose prose-lg max-w-none mx-auto mb-12">
+        {{ .Content }}
+    </div>
+    {{ end }}
+
+    <!-- Pricing Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <!-- Basic Package -->
+        <div class="card bg-base-200 shadow-xl">
+            <div class="card-body text-center">
+                <h2 class="card-title justify-center text-2xl mb-4">Pakiet Podstawowy</h2>
+                <div class="text-4xl font-bold text-primary mb-4">od 10 zł</div>
+                <ul class="text-left space-y-2 mb-6">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        Zdjęcia na dokumenty
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        Wydruki standardowe
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        Drukowanie dokumentów
+                    </li>
+                </ul>
+                <a href="/contact/" class="btn btn-primary">Wybierz pakiet</a>
+            </div>
+        </div>
+
+        <!-- Professional Package -->
+        <div class="card bg-primary text-primary-content shadow-xl border-4 border-secondary">
+            <div class="card-body text-center">
+                <div class="badge badge-secondary mb-2">NAJPOPULARNIEJSZY</div>
+                <h2 class="card-title justify-center text-2xl mb-4">Pakiet Profesjonalny</h2>
+                <div class="text-4xl font-bold mb-4">od 50 zł</div>
+                <ul class="text-left space-y-2 mb-6">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-secondary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        Wszystko z pakietu podstawowego
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-secondary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        Obróbka zdjęć w Photoshop
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-secondary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        Wydruki wysokiej jakości do A3
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-secondary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        Sesje portretowe
+                    </li>
+                </ul>
+                <a href="/contact/" class="btn btn-secondary">Wybierz pakiet</a>
+            </div>
+        </div>
+
+        <!-- Premium Package -->
+        <div class="card bg-base-200 shadow-xl">
+            <div class="card-body text-center">
+                <h2 class="card-title justify-center text-2xl mb-4">Pakiet Premium</h2>
+                <div class="text-4xl font-bold text-primary mb-4">od 150 zł</div>
+                <ul class="text-left space-y-2 mb-6">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        Wszystko z pakietu profesjonalnego
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        Kalendarze fotograficzne
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        Fotoksiążki i albumy
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        Projekty indywidualne
+                    </li>
+                </ul>
+                <a href="/contact/" class="btn btn-primary">Wybierz pakiet</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Services -->
+    <div class="card bg-base-200 shadow-xl mb-16">
+        <div class="card-body">
+            <h2 class="card-title text-3xl mb-8 justify-center">Dodatkowe Usługi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Wydruki Specjalne</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <span>Wydruk na płótnie (canvas)</span>
+                            <span class="font-semibold">od 80 zł</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Wydruk na metalu</span>
+                            <span class="font-semibold">od 120 zł</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Laminowanie A4</span>
+                            <span class="font-semibold">5 zł</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Bindowanie</span>
+                            <span class="font-semibold">od 15 zł</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Usługi Cyfrowe</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <span>Skanowanie dokumentów</span>
+                            <span class="font-semibold">2 zł/strona</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Digitalizacja zdjęć</span>
+                            <span class="font-semibold">3 zł/zdjęcie</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Retusz zdjęcia</span>
+                            <span class="font-semibold">od 25 zł</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Zmiana tła</span>
+                            <span class="font-semibold">od 30 zł</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center bg-primary text-primary-content p-12 rounded-2xl">
+        <h2 class="text-3xl font-bold mb-4">Potrzebujesz indywidualnej wyceny?</h2>
+        <p class="text-xl mb-6 opacity-90">Skontaktuj się z nami, aby omówić Twoje potrzeby</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:{{ .Site.Params.phone }}" class="btn btn-secondary btn-lg">
+                Zadzwoń: {{ .Site.Params.phone }}
+            </a>
+            <a href="/contact/" class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-primary">
+                Wyślij zapytanie
+            </a>
+        </div>
+    </div>
+</div>
+{{ end }}

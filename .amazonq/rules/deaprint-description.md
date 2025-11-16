@@ -13,17 +13,28 @@ Apart from photos, it does:
 The company has many good reviews in Google, mainly for the excellent quality of photos and awesome customer service.
   
 Address:
-Warciańska 20/47
-54-101 Wrocław
+Warmińska 20/47
+54-110 Wrocław
 
 mobile: 882947647
 e-mail: deaprint.kasia@gmail.com
 
-The company logo is in file: /home/devlin/Pictures/Dea/logoDeaPrint.jpg
+The company logo (with name) is in file: /home/devlin/Pictures/Dea/logoDeaPrint.jpg
+The logo without name is in file: /home/devlin/Pictures/Dea/logoDeaPrint_noText_C.jpg
+Use complementary colors.
 
 The service is in languages:
 
 - polish
 - english
 - ukrainian
+
+Some features that should be on the site (but not limit to them)
+
+- info about cookies with option - don't show again
+- important messages like info that photo salon will be closed in the given period; 
+  - user can close it and won't see it again
+  - the message should be visible in the given period
+- info about promotions, limited in time, visible in the defined period
+- 
 
