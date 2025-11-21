@@ -36,6 +36,7 @@ See the following files for complete specifications:
 - [about-kasia.md](about-kasia.md) - Photographer bio (5 versions to choose from)
 - [deaprint-requirements.md](deaprint-requirements.md) - Complete technical and business requirements
 - [deaprint-services-prices.md](deaprint-services-prices.md) - Services and pricing structure
+- [content-suggestions.md](content-suggestions.md) - Detailed content and visual suggestions for all pages
 
 ## Key Requirements Summary
 
@@ -107,14 +108,37 @@ Estimate time in hours/days of work with explanation of:
 - What can be done in parallel
 - Dependencies on previous steps
 
-## Questions to Address
+## Decisions Made
 
-Before generating the plan, clarify:
-1. Should we use Hugo/Tailwind/Daisy UI or suggest better alternatives?
-2. Which OpenRouter LLM model for translations? (GPT-4 Turbo, Claude 3.5 Sonnet, Mixtral, etc.)
-3. Should we implement all nice-to-have features or focus on MVP first?
-4. What's the priority order for features after basic site deployment?
-5. Should documentation be generated progressively or all at once at the end?
+### 1. Technology Stack ✅
+**Decision**: Hugo + Tailwind CSS + Daisy UI
+**Rationale**: Perfect for static photography site, excellent multilingual support, free hosting, great performance
+
+### 2. Translation LLM Model ✅
+**Decision**: Configure later in OpenRouter (model-agnostic setup)
+**Options available**: GPT-4 Turbo, Claude 3.5 Sonnet, GPT-3.5 Turbo, Mixtral 8x7B
+**Implementation**: Use OpenRouter API with configurable model parameter
+
+### 3. Feature Scope ✅
+**Decision**: MVP first (basic site → production → iterate)
+**MVP includes**: Home, About, Services, Contact pages
+**Rationale**: Get online fast, learn incrementally, adjust based on feedback
+
+### 4. Feature Priority After MVP ✅
+**Implementation order**:
+1. **Admin Panel** (Sveltia CMS) - Enable easy content management
+2. **Info Messages System** - Holiday closures, promotions
+3. **Google Reviews Integration** - Social proof
+4. **Multilingual Support** - Polish, English, Ukrainian
+5. **Blog/Articles** - SEO and customer education
+6. **Portfolio/Gallery** - Showcase work
+7. **Advanced Features** - AI content generation, digital asset delivery
+
+### 5. Documentation Strategy ✅
+**Decision**: Hybrid approach
+- Basic documentation as we build (setup, deployment, key concepts)
+- Detailed documentation at the end (comprehensive guides for all roles)
+**Rationale**: Balance learning with development speed
 
 ## Success Criteria
 
