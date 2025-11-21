@@ -1,35 +1,35 @@
 
 # DeaPrint Services and Prices
 
-Time of production is always approximated. Please, ask for details before ordering.
+Production time is approximate. Please ask for details before ordering.
 
 ## Photos
 
-### Photos to the Documents
+### Photos for Documents
 
-Taking photos to the documents - price list:
+Taking photos for documents - price list:
 
 - only digital version: 40 PLN
-- only paper version (4 pcs): 50 PLN
-- only paper version (6 pcs): 55 PLN
-- addition - digital version to the paper version: + 10 PLN
+- only paper version (4 pieces): 50 PLN
+- only paper version (6 pieces): 55 PLN
+- addition - digital version to the paper version: +10 PLN
 
-Gratis: photo retouching
+Complimentary: photo retouching
 
-### Photo sessions
+### Photo Sessions
 
-Photo session in the studio
+Photo session in the studio:
 
-- 3 takes: 100 PLN
-- each next take: + 20 PLN
+- 3 photos: 100 PLN
+- each additional photo: +20 PLN
 
 ## Prints in Photo Labs
 
 All prints can be done on glossy or matte paper.
-It takes up to 7 days
+Production time: up to 7 days
 
-9x13": 3,50 PLN
-10x15": 4,50 PLN
+9x13 cm: 3,50 PLN
+10x15 cm: 4,50 PLN
 A4: 30 PLN
 A3: 60 PLN
 
@@ -38,95 +38,95 @@ A3: 60 PLN
 Prints on hi-res paper on-site. Very high quality.
 All prints can be done on glossy or matte paper.
 
-9x13": 8 PLN
-10x15": 10 PLN
+9x13 cm: 8 PLN
+10x15 cm: 10 PLN
 A4: 40 PLN
 A3: 80 PLN
 
 ## Scanning and Printing Documents
 
-Scanning A4 documents
+Scanning A4 documents:
 
-- A4 one- sided
-- A4 - double sided (loose papers)
-- A4 from books, brochure etc
+- A4 one-sided: [PRICE TBD]
+- A4 double-sided (loose papers): [PRICE TBD]
+- A4 from books, brochures, etc.: [PRICE TBD]
 
-Printing
+Printing:
 
-- A4 2,5 PLN
-- A3 5 PLN
+- A4: 2,50 PLN
+- A3: 5 PLN
 
-## Photo renovation
+## Photo Renovation
 
-Renovation of old photos
+Renovation of old photos: [PRICE TBD - depends on complexity]
 
 ## Photobooks
 
-### Design of the Photobooks
+### Design of Photobooks
 
-Photo book design depends on the number of photos and texts inserted.
-First 100 inserts: 150 PLN
-Each next: 1 PLN
+Photobook design depends on the number of photos and texts inserted.
+First 100 inserts (each photo or text block counts as one insert): 150 PLN
+Each additional insert: 1 PLN
 
 ### Photobooks for Classes, Companies and Groups
 
-Design the photobooks for school classes includes
-- detailed specification, like
+Designing photobooks for school classes includes:
+- detailed specification, such as:
   - number of children
-  - number of photos per children/ teachers
-  - additional pages with the group photos/ from events etc
+  - number of photos per child/teacher
+  - additional pages with group photos/from events, etc.
 - support with gathering materials
 - assessment of quality
 
-(this should be updated - feel free and creative what else can be done)
+Additional services can include: layout consultation, theme design, text editing, etc.
 
 ### Photobook Printing
 
 - A4 landscape - hard cover - 24 pages: 80 PLN
-  - next 2 pages (max. 100 in total) + 4 PLN
-- A4 portrait - 24 pages: 88 PLN
-    - next 2 pages (max. 100 in total) + 4 PLN
+  - each additional 2 pages (max. 100 total): +4 PLN
+- A4 portrait - hard cover - 24 pages: 88 PLN
+  - each additional 2 pages (max. 100 total): +4 PLN
 - A4 brochure - paper cover - 24 pages: 40 PLN
-    - next 2 pages (max. 100 in total) + 4 PLN
- - 30x30 square - hard cover - 24 pages: 90 PLN
-   - next 2 pages (max. 100 in total) + 4,5 PLN
- - 20 x 20 album (hard cover and pages) - 10 pages: 74 PL
-   - next 2 pages (max. 40): = 8 PLN
-- 30 x 30 album (hard cover and pages) - 10 pages: 114 PL
-    - next 2 pages (max. 40): = 11 PLN
+  - each additional 2 pages (max. 100 total): +4 PLN
+- 30x30 cm square - hard cover - 24 pages: 90 PLN
+  - each additional 2 pages (max. 100 total): +4,50 PLN
+- 20x20 cm album (hard cover and pages) - 10 pages: 74 PLN
+  - each additional 2 pages (max. 40 total): +8 PLN
+- 30x30 cm album (hard cover and pages) - 10 pages: 114 PLN
+  - each additional 2 pages (max. 40 total): +11 PLN
 
-Additional services (for selected photobooks)
+Additional services (for selected photobooks):
 
-- Golden letters on the cover: +20 pln
-- Cover with material: + 30 pln
-- Leather cover (albums only) - color to choose from: + 40 pln
+- Golden letters on the cover: +20 PLN
+- Cover with material: +30 PLN
+- Leather cover (albums only) - color to choose from: +40 PLN
 
-Each product has different options of customization. Please, call and ask.
+Each product has different options for customization. Please call and ask.
 
-New products can be added
+New products can be added.
 
-## Photo calendars
+## Photo Calendars
 
-- Calendar - one photo per page - project gratis
-- Calendar - up to 5 photo per page - project 30 PLN
+- Calendar - one photo per page - design complimentary
+- Calendar - up to 5 photos per page - design 30 PLN
 
-- in project, photo enhancing is gratis (this can be done as a promotion)
+Photo enhancing is complimentary with calendar design.
 
-- Calendar A3 (approx. production time: 1 week) - 55 PLN
-- Calendar A3 express (time - the same day) + 20 PLN
-- Calendar A4 (production time: 1 week) - 45 PLN
-- Calendar A4 express (time - the same day) + 15 PLN
+- Calendar A3 (production time: approx. 1 week): 55 PLN
+- Calendar A3 express (same day): +20 PLN
+- Calendar A4 (production time: approx. 1 week): 45 PLN
+- Calendar A4 express (same day): +15 PLN
 
-## Other Photo services
+## Other Photo Services
 
-We can do anything with your photos. Please, contact as for the details.
+We can do anything with your photos. Please contact us for details.
 
-## Additional services
+## Additional Services
 
-### Ripping vhs tapes
+### Ripping VHS Tapes
 
-Ripping vhs tapes to the digital format
+Ripping VHS tapes to digital format: [PRICE TBD]
 
 ### Scanning Slides
 
-Scanning and printing photos from slides
+Scanning and printing photos from slides: [PRICE TBD]

@@ -8,20 +8,20 @@
 
 ## Site structure
 
-Suggested types of pages (but not limited)
+Suggested types of pages (but not limited to these):
 
 * Home
 * About
 * Portfolio
 * Services / Pricing - see deaprint-services-prices.md
-* Contact with contact form, info about parking etc, location on Google maps;
+* Contact with contact form, info about parking, etc., location on Google Maps
 * Blog / Articles
 * Gallery categories (based on the products and services, suggest something else)
 * FAQ
-* Advices, e.g. how to dress for the photo, about the make-up, hairdo etc. It can be a blog article pin to the menu entry (propose the best solution)
+* Advice, e.g., how to dress for a photo session, about makeup, hairstyle, etc. It can be a blog article pinned to the menu entry (propose the best solution)
 * Display comments from Google
 * Display comments from Facebook
-* Integrate Google business profile
+* Integrate Google Business Profile
 
 Add any extras.
 
@@ -33,12 +33,12 @@ Use as many Hugo features as possible and reasonable/useful.
 
 The service is in languages:
 
-- polish (default)
-- english
-- ukrainian - use UK
+- Polish (default)
+- English
+- Ukrainian - use UK
 - optionally others in the future
 
-if i18n is used, it should be switched automatically when the language is changed.
+If i18n is used, it should be switched automatically when the language is changed.
 
 Use folder structure:
 
@@ -50,30 +50,32 @@ Use folder structure:
 ### Content Management
 
 All text should be in *.md (markdown files) with frontmatter.
-By default, content will be created in polish language.
-If there is a text hardcoded in the template (it should be avoided), use i18n
+By default, content will be created in Polish language.
+If there is text hardcoded in the template (it should be avoided), use i18n.
 
-### Info
+### Info Messages
 
-It's possible to display a message.
-Kinds of message
+It's possible to display messages.
+Kinds of messages:
 
-- warning - example:
-  - the studio will be closed because of holiday
+- warning - examples:
+  - the studio will be closed because of a holiday
   - the deadline for calendars to be done before Christmas
 - info
   - promotions on calendars
 
-- User can accept the message and then the message should disappeared (be hidden)
-- The period when the message is visible should be configurable (in frontmatter?)
+- User can accept the message and then the message should disappear (be hidden)
+- The period when the message is visible should be configurable in frontmatter
 - It's possible to display more than one message at the same time (overlap in time)
 
 ### Translation
 
-Use hybrid translation (Best for workflow automation)
+Use hybrid translation approach:
 
-- Automatic translation on commit (CI/CD); use API for draft translation
-- Manual QA using AI (openrouter)
+- Automatic translation on commit (CI/CD) using OpenRouter + LLM (preferred) for draft translation
+  - Alternative options: Google Translate API, DeepL API
+  - Suggest which LLM model to use (e.g., GPT-4, Claude, etc.)
+- Manual QA using AI via OpenRouter
 
 ### Theme
 
@@ -103,197 +105,196 @@ Optional:
 ✔️ Analytics
 ✔️ CI/CD
 
-### 6. Working Style 
+### Working Style 
 
 Provide:
 
 * A super-prompt
-* A sequence of small prompts for Amazon-Q workflow
+* A sequence of small prompts for Amazon Q workflow
 * Manual workflow equivalent
 
-## Regulatory requirements
+## Regulatory Requirements
 
-Support for cookies, if used. 
-Inform user that cookies are used.
-User can accept of not accept - the application should work accordingly
-information about personal data management and privacy policy - generate separate page for that. 
-Fill it with recommended content. 
-Suggest what more should be done to be comply with the regulatory.
+Support for cookies (analytics, session management, etc.).
+Inform the user that cookies are used.
+User can accept or not accept - the application should work accordingly.
+Information about personal data management and privacy policy - generate a separate page for that.
+Fill it with recommended content.
+Suggest what more should be done to comply with regulations.
 
 ## Assets
 
 The company logo (with name) is in file: /home/devlin/Pictures/Dea/logoDeaPrint.jpg
 The logo without name is in file: /home/devlin/Pictures/Dea/logoDeaPrint_noText_C.jpg
-It will be replaced with png or svg version
+It will be replaced with PNG or SVG version.
 
 ## Hosting
 
 Hosting Recommendation — Cheap + SSL + Automation
-recommended: free tier with Cloud Flare pages
+Recommended: free tier with Cloudflare Pages
+Alternative options: Netlify, Vercel (provide comparison if suggesting alternatives)
 
-## Content management
+## Content Management
 
-The only required modification in case of updating content (text, blog, price, products etc) is to modify md file
-The workflow should start immediately after check-in
+The only required modification for updating content (text, blog, price, products, etc.) is to modify the relevant md file.
+The workflow should start immediately after check-in.
 
-### Git workflow
+### Git Workflow
 
-Use github actions for building. Add info which step can be replaced by cloud flare pages and required changes to the configuration.
-Include translations described earlier.
+Use GitHub Actions for building. Add info about which steps can be replaced by Cloudflare Pages and required changes to the configuration.
+Include translations as described in the Translation section above.
 
-Branches
+Branches:
 
-- main - after merge/update it should automatically deploy to the final destination. It should use content prepared in the draft, 
-  no additional actions should be done (like translation, generating thumbnails etc.) 
-- preprod - after updating/ merging to this branch, the whole building and deploying process to the draft webpage should be deployed. 
-  - Propose the url for the dev (draft) website.  
-  It should contains translation using AI via openrouter, preparing photos and other asssets, and clean up sources (like minify css) 
-    - list them and the actions.
-- develop - it can be used for a development of new features of the website. It will be used for the local development. 
-  It can be deployed to dev env to check new features. This branch can be synchronized with prod (rebase) and merged with features
-  (if deployment to dev env is needed)
-- features - feature branch
+- **main** - after merge/update, automatically deploys to production. Uses content prepared in preprod; no additional actions should be done (like translation, generating thumbnails, etc.)
+- **preprod** - after updating/merging to this branch, triggers full build and deployment to staging environment
+  - Propose the URL for the staging website
+  - Includes: translation using AI via OpenRouter, preparing photos and other assets, and cleanup of sources (like minifying CSS)
+  - List all build steps and actions
+- **develop** - used for development of new features. Used for local development. Can be deployed to dev environment to check new features. This branch can be synchronized with prod (rebase) and merged with feature branches (if deployment to dev environment is needed)
+- **feature branches** - individual feature development
 
-### Workflow for the new features
+### Workflow for New Features
 
-The new feature can be requested by user or developer
-Propose workflow for developer - admin - content creator - user. Maybe using Github issues? 
+New features can be requested by user or developer.
+Propose workflow for: developer → admin → content creator → user
+Consider using GitHub Issues for tracking.
 
 ## Communication Channel
 
-In case of errors in build process, create the Github issue and notify users.
-Provide tips how to configure it and which chanel of notification to use.
+In case of errors in the build process, create a GitHub issue and notify users.
+Provide tips on how to configure it and which channel of notification to use (email, WhatsApp, Slack, Discord, etc.).
 
 ## Admin Panel
 
-Use Sveltia CMS for editing markdown file.
-Add info about changes required when I'd like to use
+Use Sveltia CMS for editing markdown files.
+Add info about changes required if I'd like to use:
 
 - Decap CMS
 - Custom Solution with GitHub API
 
-Admin panel should be in develop branch.
-There should be an extra option to merge from develop to main
+Admin panel should be accessible from all branches.
+There should be an option to merge from develop to main via the admin panel.
 
-## Test
+## Testing
 
-I'd like to use test driven approach, if it's possible and wise in this case. Analyse it and give me recommendations.
-Describe if and how implement unit tests
+I'd like to use a test-driven approach, if it's possible and wise in this case. Analyze it and give me recommendations.
+Describe if and how to implement unit tests.
 
-Describe acceptance test scenario for each phase, with the checklists
-Explain/ suggest workflow for testing.
+Describe acceptance test scenarios for each phase, with checklists.
+Explain/suggest workflow for testing.
 
-Suggests other good practice in the terms of tests.
+Suggest other good practices in terms of tests.
 
-Generate documentation about test workflow (when it is established/ defined).
+Generate documentation about test workflow (when it is established/defined).
 
 ## Documentation
 
-All documentation should be generated into the folder /docs
+All documentation should be generated into the /docs folder.
 
-I can see those roles in the project
+I can see these roles in the project:
 - developer
-- designer/ UX designer
+- designer/UX designer
 - system administrator - technical infrastructure, hosting, security
 - site manager - day-to-day operations, user management, monitoring
 - content creator
-- editor/ content manager
+- editor/content manager
 - marketing manager
 - product owner
 
-Describe the roles, responsibilities, scopes.
+Describe the roles, responsibilities, and scopes.
 Add separate documentation for each role. Some suggestions are below.
-It's a small project, so maybe it's not necessary. Suggest optimal solution.
+It's a small project, so maybe it's not necessary. Suggest an optimal solution.
 
 ### Developer Documentation
 
-Documentation for the developer should be embedded into the source file. It should contains, among others
-- the responsibility of the class/file
-- the purpose of the method/ block of code
-- other good practices for such cases - generate what it should be.
+Documentation for the developer should be embedded into the source files. It should contain, among others:
+- the responsibilities of the class/file
+- the purpose of the method/block of code
+- other good practices for such cases - generate what it should contain
 
-General dev documentation should be generated to the folder /docs/dev
-Generate what it should contains.
+General dev documentation should be generated to the /docs/dev folder.
+Generate what it should contain.
 
 ### Admin Documentation
 
-Document workflows, its configuration, accessing, deployment process, configuration, monitoring etc.
+Document workflows, their configuration, accessing, deployment process, configuration, monitoring, etc.
 Suggest what should be documented.
-Put it in the folder /docs/admin
+Put it in the /docs/admin folder.
 
-Document the actions which should be taken in case of the common errors.
+Document the actions which should be taken in case of common errors.
 
-### Content Creator documentation
+### Content Creator Documentation
 
-It should contains information
-- how to create/modify content,
+It should contain information:
+- how to create/modify content
 - what to do in case of issues
-- how workflow works and how execute/test subsequent steps
-- good practices in creation of the content
+- how workflow works and how to execute/test subsequent steps
+- good practices in creation of content
 - how to prepare assets
-- how to add/modify all kind of information in md files
+- how to add/modify all kinds of information in md files
 - what's possible to implement, with examples in the content of the page
-- how to stage, commit and rollback changes using non-technical language
-- another - suggest what should be documented.
-Proposed location of this documents is /docs/content (can be changed if recommended)
+- how to stage, commit, and rollback changes using non-technical language
+- other - suggest what should be documented
+
+Proposed location of these documents is /docs/content (can be changed if recommended).
 
 ### Analytics Documentation
 
-Explain
+Explain:
 - how to configure and use analytics
-- what was done for seo
-- how to check the effectiveness and improve seo
+- what was done for SEO
+- how to check the effectiveness and improve SEO
 
-It may not have sense what I've written - propose a proper approach to seo and analytics.
+What I've written may not make sense - propose a proper approach to SEO and analytics.
 
 ### User Documentation
 
-Explain users
+Explain to users:
 - how workflow works
 - how to request changes
 - generate what should be there
 
-Create a checklist what should be checked (and how) after new deployment
+Create a checklist of what should be checked (and how) after new deployment:
 - of a whole site, with changes done by developer
-- with a new/ modified CI/CD process
+- with a new/modified CI/CD process
 - after adding/modifying content
 
-Notify user about it; create a task for him with checklist.
-If there is better option, propose it and describe/compare.
+Notify user about it; create a task for them with checklist.
+If there is a better option, propose it and describe/compare.
 
 ### Issues
 
-Issues can be reported by every role in the project (developer, admin, content creator, user), 
+Issues can be reported by every role in the project (developer, admin, content creator, user),
 and addressed to any other role.
-Instruct user how to report issues to github issues. Maybe it's worth to add option to the admin panel?
-Describe the issue workflow and possible configuration from the user point of view. 
+Instruct the user on how to report issues to GitHub Issues. Maybe it's worth adding an option to the admin panel?
+Describe the issue workflow and possible configuration from the user's point of view.
 The configuration will be done by admin - user has to know how the interaction looks and what they should provide
-(like email, whatsApp, slack, discord etc)
-The description should be also visible in the admin panel. User shouldn't be forced to log into github
+(like email, WhatsApp, Slack, Discord, etc.).
+The description should also be visible in the admin panel. User shouldn't be forced to log into GitHub.
 
 ## Optional Features
 
-### Workflow for Customer to send Photo
+### Workflow for Customer to Send Photo
 
-If customer order digital version of the asset, it will be sent to the email. Propose workflow for that.
-My proposition:
+If customer orders a digital version of the asset, it will be sent to the email. Propose workflow for that.
+My proposal:
 
-1. Client select the option like: request for digital asset
-2. Client fill the form with they name and email address, optionally with phone nbr
-3. The mail is sent to the deaprint email, with copy to the user
-4. The content of the mail contains link to modify booking (including cancelling) 
-5. After creating the asset, photograph can reply to that email or click the link and sent the asset
-6. Optionally, the asset can be on the server, and only link can be sent (customer can choose what they prefer)
+1. Client selects the option like: request for digital asset
+2. Client fills the form with their name and email address, optionally with phone number
+3. The email is sent to the deaprint email, with copy to the user
+4. The content of the email contains a link to modify booking (including cancelling)
+5. After creating the asset, photographer can reply to that email or click the link and send the asset
+6. Optionally, the asset can be on the server, and only a link can be sent (customer can choose what they prefer)
 
-Add protection against spammers and too many sent messages from the same person. (possible solutions)
+Add protection against spammers and too many sent messages from the same person (possible solutions: rate limiting, CAPTCHA, etc.).
 
-### Generation of the content
+### Generation of Content
 
-In admin panel, add options to generate and add different contents using AI
-- user describes what they need (e.g. a blog entry about photobooks, info about holiday, promotions)
-- app send prompt to AI (openrouter) asking for a good prompts
-- user can it modify and reject/accept
-- accepted prompt is send to AI. The respnse is placed in the destination (mf file, maybe assets like photos)
-- user can accept it by checkin to the repo or rollback
-- save (checkin or stage) changes before asking AI for modification
-
+In admin panel, add options to generate and add different content using AI:
+- user describes what they need (e.g., a blog entry about photobooks, info about holiday, promotions)
+- app sends prompt to AI (OpenRouter) asking for good prompts
+- user can modify and reject/accept
+- accepted prompt is sent to AI. The response is placed in the destination (md file, maybe assets like photos)
+- user can accept it by checking into the repo or rollback
+- save (check in or stage) changes before asking AI for modification
