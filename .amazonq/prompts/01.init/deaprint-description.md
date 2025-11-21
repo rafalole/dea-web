@@ -2,7 +2,7 @@
 
 ## About the Photographer
 
-Display descriptions from about-kasia.md - allow to change each of it. Finally I will choose one or split it to 2 pages.
+Display descriptions from [about-kasia](about-kasia.md) - allow to change each of it. Finally I will choose one or split it to 2 pages.
 
 # Service Description
 DeaPrint is a photography service. It is one-person company run by Kasia.
