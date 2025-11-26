@@ -1,0 +1,17 @@
+baseURL = 'https://deaprint.pl/'
+languageCode = 'pl'
+title = 'DeaPrint - Professional Photography'
+theme = ''  # We'll build custom theme
+
+[params]
+company = 'DeaPrint'
+owner = 'Kasia'
+address = 'Warmińska 20/47, 54-110 Wrocław'
+phone = '882947647'
+email = 'deaprint.kasia@gmail.com'
+description = 'Professional photography services in Wrocław. Document photos, prints, photobooks, and calendars.'
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true  # Allow HTML in markdown

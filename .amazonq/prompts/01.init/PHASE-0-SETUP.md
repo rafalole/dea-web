@@ -228,7 +228,7 @@
 
 ### Substeps
 
-- [ ] **Substep 0.3.1**: Create Hugo site
+- [x] **Substep 0.3.1**: Create Hugo site
   ```bash
   # Navigate to project root
   cd /home/devlin/src/github/dea-web
@@ -239,7 +239,7 @@
   # This creates: config.toml, archetypes/, content/, layouts/, static/, themes/
   ```
 
-- [ ] **Substep 0.3.2**: Convert config.toml to hugo.toml
+- [x] _No needed_ **Substep 0.3.2**: Convert config.toml to hugo.toml
   ```bash
   # Hugo now prefers hugo.toml over config.toml
   mv config.toml hugo.toml
