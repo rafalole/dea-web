@@ -345,7 +345,7 @@
 
 ### Substeps
 
-- [ ] **Substep 0.4.1**: Initialize npm project
+- [x] **Substep 0.4.1**: Initialize npm project
   ```bash
   # Create package.json
   npm init -y
@@ -356,7 +356,7 @@
   npm pkg set version="1.0.0"
   ```
 
-- [ ] **Substep 0.4.2**: Install Tailwind CSS and dependencies
+- [x] **Substep 0.4.2**: Install Tailwind CSS and dependencies
   ```bash
   # Install Tailwind, PostCSS, and Autoprefixer
   npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
