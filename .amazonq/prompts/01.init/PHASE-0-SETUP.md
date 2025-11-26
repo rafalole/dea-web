@@ -368,56 +368,33 @@
   npm list tailwindcss daisyui
   ```
 
-- [ ] **Substep 0.4.3**: Create Tailwind configuration
+- [x] **Substep 0.4.3**: Create PostCSS configuration (Tailwind v4)
   ```bash
-  # Generate tailwind.config.js
-  npx tailwindcss init
-  ```
+  # Install Tailwind v4 PostCSS plugin
+  npm install -D @tailwindcss/postcss
   
-  Then edit `tailwind.config.js`:
-  ```javascript
-  /** @type {import('tailwindcss').Config} */
-  module.exports = {
-    content: [
-      './layouts/**/*.html',
-      './content/**/*.md',
-    ],
-    theme: {
-      extend: {},
-    },
-    plugins: [
-      require('daisyui'),
-    ],
-    daisyui: {
-      themes: ["light", "dark", "cupcake"],
-      darkTheme: "dark",
-      base: true,
-      styled: true,
-      utils: true,
-    },
-  }
-  ```
-
-- [ ] **Substep 0.4.4**: Create PostCSS configuration
-  ```bash
   # Create postcss.config.js
   cat > postcss.config.js << 'EOF'
   module.exports = {
     plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
+      '@tailwindcss/postcss': {},
+      'daisyui': {},
     },
   }
   EOF
   ```
 
-- [ ] **Substep 0.4.5**: Create main CSS file
+- [x] **Substep 0.4.4**: Create main CSS file (Tailwind v4 uses CSS-based config)
   ```bash
   # Create assets/css/main.css
   cat > assets/css/main.css << 'EOF'
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+  @import "tailwindcss";
+  @import "daisyui";
+  
+  @theme {
+    --color-primary: #3b82f6;
+    --color-secondary: #8b5cf6;
+  }
   
   /* Custom styles */
   @layer components {
@@ -428,7 +405,7 @@
   EOF
   ```
 
-- [ ] **Substep 0.4.6**: Add npm scripts
+- [x] **Substep 0.4.6**: Add npm scripts
   ```bash
   # Add build scripts to package.json
   npm pkg set scripts.dev="hugo server -D"
@@ -438,13 +415,17 @@
 
 ### Learning Points
 
-- **Concept - Tailwind Content Paths**: Tailwind scans files in `content` array to find which classes you use, then generates only those classes. This keeps CSS file size small.
+- **Concept - Tailwind v4 CSS Config**: Tailwind v4 uses CSS-based configuration with `@import` and `@theme` instead of JavaScript config files. Configuration is now in your CSS file.
 
-- **Concept - Daisy UI Themes**: Daisy UI provides pre-made color themes. "light" for default, "dark" for dark mode, "cupcake" for a softer palette. You can customize or create your own.
+- **Concept - Automatic Content Detection**: Tailwind v4 automatically scans `**/*.html` files. No need to specify content paths like in v3.
 
-- **Concept - PostCSS**: A tool that processes CSS. Tailwind is a PostCSS plugin. Autoprefixer adds vendor prefixes (-webkit-, -moz-) automatically.
+- **Concept - Daisy UI v5**: DaisyUI 5.5.5+ is compatible with Tailwind v4. Configure themes using CSS or separate config file.
 
-- **Pattern - @layer components**: Tailwind's way to create reusable component classes. `btn-phone` combines multiple utility classes into one semantic class.
+- **Concept - PostCSS**: A tool that processes CSS. Both Tailwind and DaisyUI are PostCSS plugins.
+
+- **Pattern - @theme**: Define custom design tokens in CSS using `@theme { --color-primary: #3b82f6; }`. Use in HTML as `class="text-primary"`.
+
+- **Pattern - @layer components**: Create reusable component classes. `btn-phone` combines multiple utility classes into one semantic class.
 
 - **Pattern - npm scripts**: Shortcuts for common commands. `npm run dev` is easier to remember than `hugo server -D`.
 
@@ -454,10 +435,10 @@
 - [ ] Expected: Hugo server starts without errors
 - [ ] Test: Check `node_modules/` exists
 - [ ] Expected: Contains tailwindcss and daisyui folders
-- [ ] Test: Check `tailwind.config.js` exists
-- [ ] Expected: File contains daisyui plugin
-- [ ] Test: Run `npx tailwindcss --help`
-- [ ] Expected: Shows Tailwind CLI help
+- [ ] Test: Check `postcss.config.js` exists
+- [ ] Expected: File contains @tailwindcss/postcss and daisyui plugins
+- [ ] Test: Check `assets/css/main.css` exists
+- [ ] Expected: File contains @import "tailwindcss" and @import "daisyui"
 
 ### Documentation Updates
 
@@ -467,9 +448,9 @@
 ### Edge Cases
 
 - **If npm install fails**: Check Node version (must be 18+), try clearing npm cache with `npm cache clean --force`
-- **If Tailwind classes don't work**: Verify content paths in tailwind.config.js match your file structure
-- **If CSS file is huge**: Check that content paths are correct; Tailwind should purge unused classes
-- **If Daisy UI components look wrong**: Ensure `require('daisyui')` is in plugins array
+- **If Tailwind classes don't work**: Verify `@import "tailwindcss"` is in main.css and postcss.config.js has @tailwindcss/postcss plugin
+- **If CSS file is huge**: Tailwind v4 automatically optimizes; ensure you're using production build with `hugo --minify`
+- **If Daisy UI components look wrong**: Ensure `@import "daisyui"` is in main.css and 'daisyui' is in postcss.config.js plugins
 
 ---
 
