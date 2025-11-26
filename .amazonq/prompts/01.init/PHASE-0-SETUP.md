@@ -76,17 +76,17 @@
 
 ### Verification
 
-- [ ] Test: Run `hugo version`
-- [ ] Expected: Output contains "extended" keyword
-- [ ] Test: Run `node --version && npm --version`
-- [ ] Expected: Node v18+ and npm v9+
-- [ ] Test: Run `git --version`
-- [ ] Expected: Git v2.x.x
+- [x] Test: Run `hugo version` `hugo v0.152.2-6abdacad3f3fe944ea42177844469139e81feda6+extended linux/amd64 BuildDate=2025-10-24T15:31:49Z VendorInfo=snap:0.152.2`
+- [x] Expected: Output contains "extended" keyword
+- [x] Test: Run `node --version && npm --version`
+- [x] Expected: Node v18+ and npm v9+
+- [x] Test: Run `git --version`
+- [x] Expected: Git v2.x.x
 
 ### Documentation Updates
 
-- [ ] Create `/docs/dev/setup.md` with installation commands
-- [ ] Document versions used for reproducibility
+- [x] Create `/docs/dev/setup.md` with installation commands
+- [x] Document versions used for reproducibility
 
 ### Edge Cases
 
@@ -114,7 +114,7 @@
 
 ### Substeps
 
-- [ ] **Substep 0.2.1**: Create repository on GitHub
+- [x] **Substep 0.2.1**: Create repository on GitHub
   ```
   1. Go to https://github.com/new
   2. Repository name: dea-web
@@ -124,7 +124,7 @@
   6. Click "Create repository"
   ```
 
-- [ ] **Substep 0.2.2**: Initialize local Git repository
+- [x] **Substep 0.2.2**: Initialize local Git repository
   ```bash
   # Navigate to your project directory
   cd /home/devlin/src/github/dea-web
@@ -160,7 +160,7 @@
   EOF
   ```
 
-- [ ] **Substep 0.2.3**: Connect to remote repository
+- [x] **Substep 0.2.3**: Connect to remote repository
   ```bash
   # Add remote (replace with your GitHub username)
   git remote add origin https://github.com/YOUR_USERNAME/dea-web.git
@@ -169,7 +169,7 @@
   git remote -v
   ```
 
-- [ ] **Substep 0.2.4**: Create initial commit
+- [x] **Substep 0.2.4**: Create initial commit
   ```bash
   # Stage all files
   git add .

@@ -100,3 +100,9 @@ Change detected, rebuilding site (#14).
 Source changed /pricing/_index.md
 Web Server is available at http://localhost:1313/dea-web/ (bind address 0.0.0.0)
 Total in 23 ms
+
+Change detected, rebuilding site (#15).
+2025-11-16 20:05:54.172 +0100
+Source changed /pricing/_index.md
+Web Server is available at http://localhost:1313/dea-web/ (bind address 0.0.0.0)
+Total in 8 ms
