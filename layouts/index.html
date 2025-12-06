@@ -1,8 +1,81 @@
-{{ define "title" }}{{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+{{ define "description" }}{{ .Description }}{{ end }}
 
 {{ define "main" }}
-<div class="container mx-auto px-4 py-16">
-  <h1 class="text-4xl font-bold text-center">{{ .Site.Title }}</h1>
-  <p class="text-center mt-4">{{ .Site.Params.description }}</p>
-</div>
+<!-- Hero Section -->
+<section class="hero min-h-screen" style="background-image: url(/images/hero-deaprint2.png); background-size: cover; background-position: center;">
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="hero-content text-center text-neutral-content">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold" style="color: #86efac;">{{ .Site.Params.company }}</h1>
+      <p class="py-6" style="color: #93c5fd;">{{ .Site.Params.description }}</p>
+      <a href='{{ relLangURL "contact" }}' class="btn btn-primary">{{ i18n "contactUs" }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services Overview -->
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">{{ i18n "ourServices" }}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title">{{ i18n "documentPhotos" }}</h3>
+          <p>{{ i18n "documentPhotosDesc" }}</p>
+          <div class="card-actions justify-end">
+            <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title">{{ i18n "hqPrints" }}</h3>
+          <p class="text-sm opacity-70">{{ i18n "hqPrintsSubtitle" }}</p>
+          <p>{{ i18n "hqPrintsDesc" }}</p>
+          <div class="card-actions justify-end">
+            <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title">{{ i18n "photobooks" }}</h3>
+          <p>{{ i18n "photobooksDesc" }}</p>
+          <div class="card-actions justify-end">
+            <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title">{{ i18n "photoCalendars" }}</h3>
+          <p>{{ i18n "photoCalendarsDesc" }}</p>
+          <div class="card-actions justify-end">
+            <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title">{{ i18n "photoRenovation" }}</h3>
+          <p class="text-sm opacity-70">{{ i18n "photoRenovationSubtitle" }}</p>
+          <p>{{ i18n "photoRenovationDesc" }}</p>
+          <div class="card-actions justify-end">
+            <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title">{{ i18n "vhsAndSlides" }}</h3>
+          <p>{{ i18n "vhsAndSlidesDesc" }}</p>
+          <div class="card-actions justify-end">
+            <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {{ end }}

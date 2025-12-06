@@ -18,3 +18,54 @@ other = "Телефон"
 
 [allRightsReserved]
 other = "Всі права захищені."
+
+[contactUs]
+other = "Зв'язатися"
+
+[ourServices]
+other = "Наші Послуги"
+
+[documentPhotos]
+other = "Фото на Документи"
+
+[documentPhotosDesc]
+other = "Професійні фото на паспорти, посвідчення та візи"
+
+[hqPrints]
+other = "Високоякісний Друк і Сканування"
+
+[hqPrintsSubtitle]
+other = "Експрес-друк на місці • Друк у фотолабораторіях"
+
+[hqPrintsDesc]
+other = "Професійний друк і сканування документів"
+
+[photobooks]
+other = "Фотокниги"
+
+[photobooksDesc]
+other = "Персоналізовані фотокниги з вашими спогадами"
+
+[photoCalendars]
+other = "Фотокалендарі"
+
+[photoCalendarsDesc]
+other = "Настроювані календарі з вашими фото на кожен місяць"
+
+[photoRenovation]
+other = "Реставрація Фото"
+
+[photoRenovationSubtitle]
+other = "Інші фотопослуги"
+
+[photoRenovationDesc]
+other = "Відновлення та ремонт старих або пошкоджених фото"
+
+[vhsAndSlides]
+other = "Цифровізація VHS і Слайдів"
+
+[vhsAndSlidesDesc]
+other = "Конвертація VHS-касет і слайдів у цифровий формат"
+
+[learnMore]
+other = "Дізнатися більше"

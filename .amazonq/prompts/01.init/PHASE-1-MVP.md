@@ -194,7 +194,7 @@
       <div class="max-w-md">
         <h1 class="text-5xl font-bold">{{ .Site.Params.company }}</h1>
         <p class="py-6">{{ .Site.Params.description }}</p>
-        <a href="{{ relLangURL "contact" }}" class="btn btn-primary">{{ if eq .Language.Lang "pl" }}Skontaktuj się{{ else if eq .Language.Lang "uk" }}Зв'язатися{{ else }}Contact Us{{ end }}</a>
+        <a href='{{ relLangURL "contact" }}' class="btn btn-primary">{{ i18n "contactUs" }}</a>
       </div>
     </div>
   </section>
@@ -202,32 +202,61 @@
   <!-- Services Overview -->
   <section class="py-16">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">{{ if eq .Language.Lang "pl" }}Nasze Usługi{{ else if eq .Language.Lang "uk" }}Наші Послуги{{ else }}Our Services{{ end }}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <h2 class="text-3xl font-bold text-center mb-12">{{ i18n "ourServices" }}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="card bg-base-100 shadow-xl">
           <div class="card-body">
-            <h3 class="card-title">{{ if eq .Language.Lang "pl" }}Zdjęcia do Dokumentów{{ else if eq .Language.Lang "uk" }}Фото на Документи{{ else }}Document Photos{{ end }}</h3>
-            <p>{{ if eq .Language.Lang "pl" }}Profesjonalne zdjęcia do paszportów, dowodów i wiz{{ else if eq .Language.Lang "uk" }}Професійні фото на паспорти, посвідчення та візи{{ else }}Professional photos for passports, IDs, and visas{{ end }}</p>
+            <h3 class="card-title">{{ i18n "documentPhotos" }}</h3>
+            <p>{{ i18n "documentPhotosDesc" }}</p>
             <div class="card-actions justify-end">
-              <a href="{{ relLangURL "services" }}" class="btn btn-primary">{{ if eq .Language.Lang "pl" }}Dowiedz się więcej{{ else if eq .Language.Lang "uk" }}Дізнатися більше{{ else }}Learn More{{ end }}</a>
+              <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
             </div>
           </div>
         </div>
         <div class="card bg-base-100 shadow-xl">
           <div class="card-body">
-            <h3 class="card-title">{{ if eq .Language.Lang "pl" }}Sesje Zdjęciowe{{ else if eq .Language.Lang "uk" }}Фотосесії{{ else }}Photo Sessions{{ end }}</h3>
-            <p>{{ if eq .Language.Lang "pl" }}Sesje studyjne dla osób i rodzin{{ else if eq .Language.Lang "uk" }}Студійні фотосесії для осіб та сімей{{ else }}Studio photo sessions for individuals and families{{ end }}</p>
+            <h3 class="card-title">{{ i18n "hqPrints" }}</h3>
+            <p class="text-sm opacity-70">{{ i18n "hqPrintsSubtitle" }}</p>
+            <p>{{ i18n "hqPrintsDesc" }}</p>
             <div class="card-actions justify-end">
-              <a href="{{ relLangURL "services" }}" class="btn btn-primary">{{ if eq .Language.Lang "pl" }}Dowiedz się więcej{{ else if eq .Language.Lang "uk" }}Дізнатися більше{{ else }}Learn More{{ end }}</a>
+              <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
             </div>
           </div>
         </div>
         <div class="card bg-base-100 shadow-xl">
           <div class="card-body">
-            <h3 class="card-title">{{ if eq .Language.Lang "pl" }}Fotoksiążki i Kalendarze{{ else if eq .Language.Lang "uk" }}Фотокниги та Календарі{{ else }}Photobooks & Calendars{{ end }}</h3>
-            <p>{{ if eq .Language.Lang "pl" }}Spersonalizowane fotoksiążki i kalendarze z Twoimi zdjęciami{{ else if eq .Language.Lang "uk" }}Персоналізовані фотокниги та календарі з вашими фото{{ else }}Custom photobooks and calendars with your photos{{ end }}</p>
+            <h3 class="card-title">{{ i18n "photobooks" }}</h3>
+            <p>{{ i18n "photobooksDesc" }}</p>
             <div class="card-actions justify-end">
-              <a href="{{ relLangURL "services" }}" class="btn btn-primary">{{ if eq .Language.Lang "pl" }}Dowiedz się więcej{{ else if eq .Language.Lang "uk" }}Дізнатися більше{{ else }}Learn More{{ end }}</a>
+              <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <h3 class="card-title">{{ i18n "photoCalendars" }}</h3>
+            <p>{{ i18n "photoCalendarsDesc" }}</p>
+            <div class="card-actions justify-end">
+              <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <h3 class="card-title">{{ i18n "photoRenovation" }}</h3>
+            <p class="text-sm opacity-70">{{ i18n "photoRenovationSubtitle" }}</p>
+            <p>{{ i18n "photoRenovationDesc" }}</p>
+            <div class="card-actions justify-end">
+              <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <h3 class="card-title">{{ i18n "vhsAndSlides" }}</h3>
+            <p>{{ i18n "vhsAndSlidesDesc" }}</p>
+            <div class="card-actions justify-end">
+              <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
             </div>
           </div>
         </div>
