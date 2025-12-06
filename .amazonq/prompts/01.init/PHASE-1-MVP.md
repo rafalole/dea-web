@@ -18,10 +18,10 @@
 
 ### Prerequisites
 
-| Category | Requirement | Why It's Needed |
-|----------|-------------|------------------|
-| Files | Phase 0 complete | Hugo and Tailwind configured |
-| Knowledge | HTML basics | Template structure |
+| Category  | Requirement      | Why It's Needed              |
+|-----------|------------------|------------------------------|
+| Files     | Phase 0 complete | Hugo and Tailwind configured |
+| Knowledge | HTML basics      | Template structure           |
 
 ### Substeps
 

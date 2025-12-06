@@ -114,17 +114,17 @@ feature → main (via PR)
 
 ## Comparison Table
 
-| Feature | Current | Requirements | GitHub Flow |
-|---------|---------|--------------|-------------|
-| **Branches** | 4 (main, preprod, develop, feature) | 4 (main, preprod, develop, feature) | 2 (main, feature) |
-| **Complexity** | Medium | High | Low |
-| **Staging** | Yes (preprod) | Yes (preprod + build) | No |
-| **Dev Environment** | No | Yes (optional) | No |
-| **Build Process** | On every branch | Only on preprod | On main |
-| **Translations** | Manual | Automated (preprod) | Manual or on main |
-| **Deploy Speed** | Medium | Fast (main), Slow (preprod) | Fast |
-| **Best For** | Small teams | Content-heavy sites | Simple projects |
-| **Learning Curve** | Easy | Hard | Very Easy |
+| Feature             | Current                             | Requirements                        | GitHub Flow       |
+|---------------------|-------------------------------------|-------------------------------------|-------------------|
+| **Branches**        | 4 (main, preprod, develop, feature) | 4 (main, preprod, develop, feature) | 2 (main, feature) |
+| **Complexity**      | Medium                              | High                                | Low               |
+| **Staging**         | Yes (preprod)                       | Yes (preprod + build)               | No                |
+| **Dev Environment** | No                                  | Yes (optional)                      | No                |
+| **Build Process**   | On every branch                     | Only on preprod                     | On main           |
+| **Translations**    | Manual                              | Automated (preprod)                 | Manual or on main |
+| **Deploy Speed**    | Medium                              | Fast (main), Slow (preprod)         | Fast              |
+| **Best For**        | Small teams                         | Content-heavy sites                 | Simple projects   |
+| **Learning Curve**  | Easy                                | Hard                                | Very Easy         |
 
 ---
 

@@ -246,16 +246,16 @@ docs/
 
 ## Quick Reference
 
-| Directory | Editable | Committed | Purpose |
-|-----------|----------|-----------|---------|
-| `content/` | ✅ Yes | ✅ Yes | Page content |
-| `layouts/` | ✅ Yes | ✅ Yes | Templates |
-| `static/` | ✅ Yes | ✅ Yes | Static files |
-| `assets/` | ✅ Yes | ✅ Yes | Processed files |
-| `data/` | ✅ Yes | ✅ Yes | Structured data |
-| `public/` | ❌ No | ❌ No | Generated output |
-| `resources/` | ❌ No | ❌ No | Hugo cache |
-| `docs/` | ✅ Yes | ✅ Yes | Documentation |
+| Directory    | Editable | Committed | Purpose          |
+|--------------|----------|-----------|------------------|
+| `content/`   | ✅ Yes    | ✅ Yes     | Page content     |
+| `layouts/`   | ✅ Yes    | ✅ Yes     | Templates        |
+| `static/`    | ✅ Yes    | ✅ Yes     | Static files     |
+| `assets/`    | ✅ Yes    | ✅ Yes     | Processed files  |
+| `data/`      | ✅ Yes    | ✅ Yes     | Structured data  |
+| `public/`    | ❌ No     | ❌ No      | Generated output |
+| `resources/` | ❌ No     | ❌ No      | Hugo cache       |
+| `docs/`      | ✅ Yes    | ✅ Yes     | Documentation    |
 
 ---
 

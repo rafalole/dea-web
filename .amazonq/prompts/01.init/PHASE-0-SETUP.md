@@ -18,11 +18,11 @@
 
 ### Prerequisites
 
-| Category | Requirement | Why It's Needed |
-|----------|-------------|------------------|
-| System | Linux operating system | Based on your IDE context |
-| Access | sudo/root access | To install system packages |
-| Internet | Stable connection | Download packages |
+| Category | Requirement            | Why It's Needed            |
+|----------|------------------------|----------------------------|
+| System   | Linux operating system | Based on your IDE context  |
+| Access   | sudo/root access       | To install system packages |
+| Internet | Stable connection      | Download packages          |
 
 ### Substeps
 
@@ -106,11 +106,11 @@
 
 ### Prerequisites
 
-| Category | Requirement | Why It's Needed |
-|----------|-------------|------------------|
-| Account | GitHub account | Version control and deployment |
-| Software | Git installed | From Step 0.1.3 |
-| Knowledge | Basic Git commands | commit, push, pull |
+| Category  | Requirement        | Why It's Needed                |
+|-----------|--------------------|--------------------------------|
+| Account   | GitHub account     | Version control and deployment |
+| Software  | Git installed      | From Step 0.1.3                |
+| Knowledge | Basic Git commands | commit, push, pull             |
 
 ### Substeps
 
@@ -221,10 +221,10 @@
 
 ### Prerequisites
 
-| Category | Requirement | Why It's Needed |
-|----------|-------------|------------------|
-| Software | Hugo Extended installed | From Step 0.1.1 |
-| Files | Git repository initialized | From Step 0.2 |
+| Category | Requirement                | Why It's Needed |
+|----------|----------------------------|-----------------|
+| Software | Hugo Extended installed    | From Step 0.1.1 |
+| Files    | Git repository initialized | From Step 0.2   |
 
 ### Substeps
 
@@ -338,10 +338,10 @@
 
 ### Prerequisites
 
-| Category | Requirement | Why It's Needed |
-|----------|-------------|------------------|
-| Software | Node.js and npm | From Step 0.1.2 |
-| Files | Hugo project initialized | From Step 0.3 |
+| Category | Requirement              | Why It's Needed |
+|----------|--------------------------|-----------------|
+| Software | Node.js and npm          | From Step 0.1.2 |
+| Files    | Hugo project initialized | From Step 0.3   |
 
 ### Substeps
 

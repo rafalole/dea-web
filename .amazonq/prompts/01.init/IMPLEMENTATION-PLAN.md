@@ -27,15 +27,15 @@ Generated from: [master-implementation-plan.md](master-implementation-plan.md)
 
 ### Technology Stack Rationale
 
-| Technology | Why This Choice | Alternatives Considered |
-|------------|----------------|------------------------|
-| **Hugo Extended** | Fast static generation, excellent i18n, free hosting, perfect for content-heavy sites | Astro (easier but less mature), Next.js (overkill) |
-| **Tailwind CSS** | Utility-first, rapid development, small bundle size, industry standard | Bootstrap (less flexible), custom CSS (slower) |
-| **Daisy UI** | 50+ components, Tailwind-based, beautiful defaults, saves development time | Headless UI (more work), custom components (slower) |
-| **Cloudflare Pages** | Free, fast CDN, automatic SSL, GitHub integration, unlimited bandwidth | Netlify (similar), Vercel (similar), GitHub Pages (slower) |
-| **Sveltia CMS** | Modern, Git-based, works with Hugo, better UX than Decap CMS | Decap CMS (older), Forestry (discontinued), custom admin (too much work) |
-| **GitHub Actions** | Free for public repos, integrated with GitHub, flexible CI/CD | GitLab CI (if using GitLab), Cloudflare Pages CI (simpler but less control) |
-| **OpenRouter** | Model-agnostic, access to multiple LLMs, pay-as-you-go, no vendor lock-in | Direct API (vendor lock-in), Google Translate (less quality) |
+| Technology           | Why This Choice                                                                       | Alternatives Considered                                                     |
+|----------------------|---------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| **Hugo Extended**    | Fast static generation, excellent i18n, free hosting, perfect for content-heavy sites | Astro (easier but less mature), Next.js (overkill)                          |
+| **Tailwind CSS**     | Utility-first, rapid development, small bundle size, industry standard                | Bootstrap (less flexible), custom CSS (slower)                              |
+| **Daisy UI**         | 50+ components, Tailwind-based, beautiful defaults, saves development time            | Headless UI (more work), custom components (slower)                         |
+| **Cloudflare Pages** | Free, fast CDN, automatic SSL, GitHub integration, unlimited bandwidth                | Netlify (similar), Vercel (similar), GitHub Pages (slower)                  |
+| **Sveltia CMS**      | Modern, Git-based, works with Hugo, better UX than Decap CMS                          | Decap CMS (older), Forestry (discontinued), custom admin (too much work)    |
+| **GitHub Actions**   | Free for public repos, integrated with GitHub, flexible CI/CD                         | GitLab CI (if using GitLab), Cloudflare Pages CI (simpler but less control) |
+| **OpenRouter**       | Model-agnostic, access to multiple LLMs, pay-as-you-go, no vendor lock-in             | Direct API (vendor lock-in), Google Translate (less quality)                |
 
 ---
 
@@ -103,14 +103,14 @@ Before diving into the full plan, here's one complete example step showing the e
 
 ### Prerequisites
 
-| Category | Requirement | Why It's Needed |
-|----------|-------------|------------------|
-| Software | Hugo Extended v0.121.0+ installed | Processes Tailwind CSS and Daisy UI |
-| Software | Node.js v18+ and npm | Installs Tailwind and Daisy UI packages |
-| Knowledge | Basic HTML structure | Understanding of semantic markup |
-| Knowledge | Daisy UI hero component | Pre-built component for hero sections |
-| Files | Hugo project initialized | From Step 1.1 |
-| Files | Tailwind + Daisy UI configured | From Step 1.2 |
+| Category  | Requirement                       | Why It's Needed                         |
+|-----------|-----------------------------------|-----------------------------------------|
+| Software  | Hugo Extended v0.121.0+ installed | Processes Tailwind CSS and Daisy UI     |
+| Software  | Node.js v18+ and npm              | Installs Tailwind and Daisy UI packages |
+| Knowledge | Basic HTML structure              | Understanding of semantic markup        |
+| Knowledge | Daisy UI hero component           | Pre-built component for hero sections   |
+| Files     | Hugo project initialized          | From Step 1.1                           |
+| Files     | Tailwind + Daisy UI configured    | From Step 1.2                           |
 
 ### Substeps
 
