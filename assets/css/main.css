@@ -1,14 +1,7 @@
 @import "tailwindcss";
-@import "daisyui";
+@plugin "daisyui";
 
 @theme {
   --color-primary: #3b82f6;
   --color-secondary: #8b5cf6;
-}
-
-/* Custom styles */
-@layer components {
-  .btn-phone {
-    @apply btn btn-primary gap-2;
-  }
 }

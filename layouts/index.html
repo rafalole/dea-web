@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Site.Title }}</title>
-</head>
-<body>
-    <h1>{{ .Site.Title }}</h1>
-</body>
-</html>
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="container mx-auto px-4 py-16">
+  <h1 class="text-4xl font-bold text-center">{{ .Site.Title }}</h1>
+  <p class="text-center mt-4">{{ .Site.Params.description }}</p>
+</div>
+{{ end }}

@@ -1,0 +1,51 @@
+<header class="navbar bg-base-100 shadow-lg">
+  <div class="container mx-auto">
+    <div class="flex-1">
+      <a href='{{ .Site.Home.RelPermalink }}' class="btn btn-ghost text-xl">{{ .Site.Params.company }}</a>
+    </div>
+    
+    <!-- Desktop Navigation -->
+    <div class="flex-none hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href='{{ .Site.Home.RelPermalink }}'>{{ i18n "home" }}</a></li>
+        <li><a href='{{ relLangURL "about" }}'>{{ i18n "about" }}</a></li>
+        <li><a href='{{ relLangURL "services" }}'>{{ i18n "services" }}</a></li>
+        <li><a href='{{ relLangURL "contact" }}'>{{ i18n "contact" }}</a></li>
+      </ul>
+      <!-- Language Switcher -->
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost">
+          {{ .Language.LanguageName }}
+        </label>
+        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-32">
+          {{ range .Translations }}
+            <li><a href='{{ .RelPermalink }}'>{{ .Language.LanguageName }}</a></li>
+          {{ end }}
+          <li><a href='{{ .RelPermalink }}'>{{ .Language.LanguageName }}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="flex-none lg:hidden">
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-3">
+          <li><a href='{{ .Site.Home.RelPermalink }}'>{{ i18n "home" }}</a></li>
+          <li><a href='{{ relLangURL "about" }}'>{{ i18n "about" }}</a></li>
+          <li><a href='{{ relLangURL "services" }}'>{{ i18n "services" }}</a></li>
+          <li><a href='{{ relLangURL "contact" }}'>{{ i18n "contact" }}</a></li>
+          <li class="menu-title">{{ i18n "language" }}</li>
+          {{ range .Translations }}
+            <li><a href='{{ .RelPermalink }}'>{{ .Language.LanguageName }}</a></li>
+          {{ end }}
+          <li><a href='{{ .RelPermalink }}'>{{ .Language.LanguageName }}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

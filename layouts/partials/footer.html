@@ -1,0 +1,11 @@
+<footer class="footer footer-center p-10 bg-base-200 text-base-content">
+  <div>
+    <p class="font-bold">{{ .Site.Params.company }}</p>
+    <p>{{ .Site.Params.address }}</p>
+    <p>{{ i18n "phone" }}: <a href='tel:+48{{ .Site.Params.phone }}'>{{ .Site.Params.phone }}</a></p>
+    <p>Email: <a href='mailto:{{ .Site.Params.email }}'>{{ .Site.Params.email }}</a></p>
+  </div>
+  <div>
+    <p>© {{ now.Year }} {{ .Site.Params.company }}. {{ i18n "allRightsReserved" }}</p>
+  </div>
+</footer>
