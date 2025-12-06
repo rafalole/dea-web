@@ -29,7 +29,7 @@
   ```bash
   cat > layouts/_default/baseof.html << 'EOF'
   <!DOCTYPE html>
-  <html lang="{{ .Site.LanguageCode }}">
+  <html lang="{{ .Language.LanguageCode }}">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,21 +49,55 @@
   EOF
   ```
 
-- [ ] **Substep 1.1.2**: Create header partial
+- [ ] **Substep 1.1.2**: Create header partial with mobile menu
   ```bash
   cat > layouts/partials/header.html << 'EOF'
   <header class="navbar bg-base-100 shadow-lg">
     <div class="container mx-auto">
       <div class="flex-1">
-        <a href="/" class="btn btn-ghost text-xl">{{ .Site.Params.company }}</a>
+        <a href="{{ .Site.Home.RelPermalink }}" class="btn btn-ghost text-xl">{{ .Site.Params.company }}</a>
       </div>
-      <div class="flex-none">
+      
+      <!-- Desktop Navigation -->
+      <div class="flex-none hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/services/">Services</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          <li><a href="{{ .Site.Home.RelPermalink }}">Home</a></li>
+          <li><a href="{{ relLangURL "about" }}">About</a></li>
+          <li><a href="{{ relLangURL "services" }}">Services</a></li>
+          <li><a href="{{ relLangURL "contact" }}">Contact</a></li>
         </ul>
+        <!-- Language Switcher -->
+        <div class="dropdown dropdown-end">
+          <label tabindex="0" class="btn btn-ghost">
+            {{ .Language.LanguageName }}
+          </label>
+          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-32">
+            {{ range .Site.Languages }}
+              <li><a href="{{ .Lang }}/">{{ .LanguageName }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="flex-none lg:hidden">
+        <div class="dropdown dropdown-end">
+          <label tabindex="0" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-3">
+            <li><a href="{{ .Site.Home.RelPermalink }}">Home</a></li>
+            <li><a href="{{ relLangURL "about" }}">About</a></li>
+            <li><a href="{{ relLangURL "services" }}">Services</a></li>
+            <li><a href="{{ relLangURL "contact" }}">Contact</a></li>
+            <li class="menu-title">Language</li>
+            {{ range .Site.Languages }}
+              <li><a href="{{ .Lang }}/">{{ .LanguageName }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -101,6 +135,8 @@
 - [ ] Expected: Server starts without errors
 - [ ] Test: Visit http://localhost:1313
 - [ ] Expected: See header with navigation and footer
+- [ ] Test: Resize browser to mobile width (< 1024px)
+- [ ] Expected: Navigation collapses to hamburger menu
 
 ### Documentation Updates
 
@@ -118,12 +154,29 @@
 
 ### Substeps
 
-- [ ] **Substep 1.2.1**: Update homepage content
+- [ ] **Substep 1.2.1**: Create homepage content for all languages
   ```bash
-  cat > content/_index.md << 'EOF'
+  # Polish (default)
+  cat > content/pl/_index.md << 'EOF'
+  ---
+  title: "Profesjonalne Usługi Fotograficzne we Wrocławiu"
+  description: "DeaPrint oferuje profesjonalne usługi fotograficzne: zdjęcia do dokumentów, sesje zdjęciowe, wydruki, fotoksiążki i kalendarze we Wrocławiu."
+  ---
+  EOF
+
+  # English
+  cat > content/en/_index.md << 'EOF'
   ---
   title: "Professional Photography Services in Wrocław"
   description: "DeaPrint offers professional photography services including document photos, photo sessions, prints, photobooks, and calendars in Wrocław."
+  ---
+  EOF
+
+  # Ukrainian
+  cat > content/uk/_index.md << 'EOF'
+  ---
+  title: "Професійні Фотопослуги у Вроцлаві"
+  description: "DeaPrint пропонує професійні фотопослуги: фото на документи, фотосесії, друк, фотокниги та календарі у Вроцлаві."
   ---
   EOF
   ```
@@ -140,8 +193,8 @@
     <div class="hero-content text-center">
       <div class="max-w-md">
         <h1 class="text-5xl font-bold">{{ .Site.Params.company }}</h1>
-        <p class="py-6">Professional photography services in Wrocław</p>
-        <a href="/contact/" class="btn btn-primary">Contact Us</a>
+        <p class="py-6">{{ .Site.Params.description }}</p>
+        <a href="{{ relLangURL "contact" }}" class="btn btn-primary">{{ if eq .Language.Lang "pl" }}Skontaktuj się{{ else if eq .Language.Lang "uk" }}Зв'язатися{{ else }}Contact Us{{ end }}</a>
       </div>
     </div>
   </section>
@@ -149,32 +202,32 @@
   <!-- Services Overview -->
   <section class="py-16">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+      <h2 class="text-3xl font-bold text-center mb-12">{{ if eq .Language.Lang "pl" }}Nasze Usługi{{ else if eq .Language.Lang "uk" }}Наші Послуги{{ else }}Our Services{{ end }}</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="card bg-base-100 shadow-xl">
           <div class="card-body">
-            <h3 class="card-title">Document Photos</h3>
-            <p>Professional photos for passports, IDs, and visas</p>
+            <h3 class="card-title">{{ if eq .Language.Lang "pl" }}Zdjęcia do Dokumentów{{ else if eq .Language.Lang "uk" }}Фото на Документи{{ else }}Document Photos{{ end }}</h3>
+            <p>{{ if eq .Language.Lang "pl" }}Profesjonalne zdjęcia do paszportów, dowodów i wiz{{ else if eq .Language.Lang "uk" }}Професійні фото на паспорти, посвідчення та візи{{ else }}Professional photos for passports, IDs, and visas{{ end }}</p>
             <div class="card-actions justify-end">
-              <a href="/services/" class="btn btn-primary">Learn More</a>
+              <a href="{{ relLangURL "services" }}" class="btn btn-primary">{{ if eq .Language.Lang "pl" }}Dowiedz się więcej{{ else if eq .Language.Lang "uk" }}Дізнатися більше{{ else }}Learn More{{ end }}</a>
             </div>
           </div>
         </div>
         <div class="card bg-base-100 shadow-xl">
           <div class="card-body">
-            <h3 class="card-title">Photo Sessions</h3>
-            <p>Studio photo sessions for individuals and families</p>
+            <h3 class="card-title">{{ if eq .Language.Lang "pl" }}Sesje Zdjęciowe{{ else if eq .Language.Lang "uk" }}Фотосесії{{ else }}Photo Sessions{{ end }}</h3>
+            <p>{{ if eq .Language.Lang "pl" }}Sesje studyjne dla osób i rodzin{{ else if eq .Language.Lang "uk" }}Студійні фотосесії для осіб та сімей{{ else }}Studio photo sessions for individuals and families{{ end }}</p>
             <div class="card-actions justify-end">
-              <a href="/services/" class="btn btn-primary">Learn More</a>
+              <a href="{{ relLangURL "services" }}" class="btn btn-primary">{{ if eq .Language.Lang "pl" }}Dowiedz się więcej{{ else if eq .Language.Lang "uk" }}Дізнатися більше{{ else }}Learn More{{ end }}</a>
             </div>
           </div>
         </div>
         <div class="card bg-base-100 shadow-xl">
           <div class="card-body">
-            <h3 class="card-title">Photobooks & Calendars</h3>
-            <p>Custom photobooks and calendars with your photos</p>
+            <h3 class="card-title">{{ if eq .Language.Lang "pl" }}Fotoksiążki i Kalendarze{{ else if eq .Language.Lang "uk" }}Фотокниги та Календарі{{ else }}Photobooks & Calendars{{ end }}</h3>
+            <p>{{ if eq .Language.Lang "pl" }}Spersonalizowane fotoksiążki i kalendarze z Twoimi zdjęciami{{ else if eq .Language.Lang "uk" }}Персоналізовані фотокниги та календарі з вашими фото{{ else }}Custom photobooks and calendars with your photos{{ end }}</p>
             <div class="card-actions justify-end">
-              <a href="/services/" class="btn btn-primary">Learn More</a>
+              <a href="{{ relLangURL "services" }}" class="btn btn-primary">{{ if eq .Language.Lang "pl" }}Dowiedz się więcej{{ else if eq .Language.Lang "uk" }}Дізнатися більше{{ else }}Learn More{{ end }}</a>
             </div>
           </div>
         </div>
@@ -195,8 +248,10 @@
 
 - [ ] Test: Visit http://localhost:1313
 - [ ] Expected: See hero section and 3 service cards
-- [ ] Test: Resize browser window
-- [ ] Expected: Layout adapts to mobile/desktop
+- [ ] Test: Resize browser window to mobile width
+- [ ] Expected: Cards stack vertically (1 column)
+- [ ] Test: Resize to desktop width
+- [ ] Expected: Cards display in 3 columns
 
 ---
 
@@ -210,9 +265,10 @@
 
 ### Substeps
 
-- [ ] **Substep 1.3.1**: Create about page content
+- [ ] **Substep 1.3.1**: Create about page content for all languages
   ```bash
-  cat > content/about/_index.md << 'EOF'
+  # Polish
+  cat > content/pl/about/_index.md << 'EOF'
   ---
   title: "About DeaPrint"
   description: "Learn about Kasia and DeaPrint photography studio in Wrocław"
@@ -269,9 +325,9 @@
 
 ### Substeps
 
-- [ ] **Substep 1.4.1**: Create services content
+- [ ] **Substep 1.4.1**: Create services content (Polish first, translate later)
   ```bash
-  cat > content/services/_index.md << 'EOF'
+  cat > content/pl/services/_index.md << 'EOF'
   ---
   title: "Services & Pricing"
   description: "DeaPrint photography services and prices in Wrocław"
@@ -363,9 +419,18 @@
 
 ### Substeps
 
-- [ ] **Substep 1.5.1**: Create contact content
+- [ ] **Substep 1.5.1**: Create contact content for all languages
   ```bash
-  cat > content/contact/_index.md << 'EOF'
+  # Polish
+  cat > content/pl/contact/_index.md << 'EOF'
+  ---
+  title: "Kontakt"
+  description: "Skontaktuj się ze studiem fotograficznym DeaPrint we Wrocławiu"
+  ---
+  EOF
+
+  # English
+  cat > content/en/contact/_index.md << 'EOF'
   ---
   title: "Contact Us"
   description: "Contact DeaPrint photography studio in Wrocław"
@@ -435,8 +500,9 @@
 
         <!-- Google Maps -->
         <div class="mt-8">
+          <!-- Google Maps for Warmińska 20/47, Wrocław -->
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.123!2d17.0123!3d51.1234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDA3JzI0LjIiTiAxN8KwMDAnNDQuMyJF!5e0!3m2!1sen!2spl!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.8!2d17.0385!3d51.1089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc27f60898c8d%3A0x1234567890!2sWarmi%C5%84ska%2020%2C%2054-110%20Wroc%C5%82aw!5e0!3m2!1sen!2spl!4v1234567890"
             width="100%" 
             height="300" 
             style="border:0;" 
@@ -461,6 +527,8 @@
 
 - [ ] Test: Visit http://localhost:1313/contact/
 - [ ] Expected: See contact form and info
+- [ ] Test: Resize to mobile width
+- [ ] Expected: Form and info stack vertically
 - [ ] Test: Submit form (after Formspree setup)
 - [ ] Expected: Receive email
 
