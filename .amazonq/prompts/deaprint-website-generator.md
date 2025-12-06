@@ -18,7 +18,7 @@ Create a professional website for DeaPrint photography service using the followi
 - School photobooks
 
 ## Company Details
-- **Address**: Warciańska 20/47, 54-101 Wrocław
+- **Address**: Warmińska 20/47, 54-101 Wrocław
 - **Mobile**: 882947647
 - **Email**: deaprint.kasia@gmail.com
 - **Logo**: Available at /home/devlin/Pictures/Dea/logoDeaPrint.jpg

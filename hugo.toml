@@ -1,15 +1,40 @@
 baseURL = 'https://deaprint.pl/'
-languageCode = 'pl'
-title = 'DeaPrint - Professional Photography'
+defaultContentLanguage = 'pl'
 theme = ''  # We'll build custom theme
 
+# Shared parameters (language-independent)
 [params]
 company = 'DeaPrint'
 owner = 'Kasia'
 address = 'Warmińska 20/47, 54-110 Wrocław'
 phone = '882947647'
 email = 'deaprint.kasia@gmail.com'
-description = 'Professional photography services in Wrocław. Document photos, prints, photobooks, and calendars.'
+
+# Language-specific configuration
+[languages]
+  [languages.pl]
+    languageCode = 'pl'
+    languageName = 'Polski'
+    weight = 1
+    title = 'DeaPrint - Profesjonalna Fotografia'
+    [languages.pl.params]
+      description = 'Profesjonalne usługi fotograficzne we Wrocławiu. Zdjęcia do dokumentów, wydruki, fotoksiążki i kalendarze.'
+
+  [languages.en]
+    languageCode = 'en'
+    languageName = 'English'
+    weight = 2
+    title = 'DeaPrint - Professional Photography'
+    [languages.en.params]
+      description = 'Professional photography services in Wrocław. Document photos, prints, photobooks, and calendars.'
+
+  [languages.uk]
+    languageCode = 'uk'
+    languageName = 'Українська'
+    weight = 3
+    title = 'DeaPrint - Професійна Фотографія'
+    [languages.uk.params]
+      description = 'Професійні фотопослуги у Вроцлаві. Фото на документи, друк, фотокниги та календарі.'
 
 [markup]
 [markup.goldmark]

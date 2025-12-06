@@ -42,7 +42,7 @@ Create a stunning, modern website for DeaPrint photography service that showcase
 
 ### 5. Business Features
 - **Contact Information**: 
-  - Address: Warciańska 20/47, 54-101 Wrocław
+  - Address: Warmińska 20/47, 54-101 Wrocław
   - Mobile: 882947647
   - Email: deaprint.kasia@gmail.com
 - **Business Hours**: Operating schedule
