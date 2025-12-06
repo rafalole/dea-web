@@ -143,6 +143,55 @@ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git theme
 
 ---
 
+### disableKinds
+
+```toml
+# Disable taxonomies (categories/tags) and RSS - not needed for portfolio site
+# Only needed if adding blog posts or filterable content
+disableKinds = ['taxonomy', 'term', 'RSS']
+```
+
+**Purpose**: Disables specific Hugo content types
+
+**Current value**: `['taxonomy', 'term', 'RSS']` - disables categories, tags, and RSS feeds
+
+**What it removes**:
+- `/categories/` folder and pages
+- `/tags/` folder and pages
+- `index.xml` RSS feed files
+- Taxonomy and RSS processing during build
+
+**Why disabled for DeaPrint**:
+- Portfolio site with static pages (not a blog)
+- Services organized as sections, not categories
+- No frequent content updates that need RSS subscription
+- Reduces build time and output size
+
+**When to enable** (remove from disableKinds):
+- Adding blog posts with categories/tags
+- Portfolio items that need filtering
+- News/updates section that users can subscribe to
+- Photography tips blog with RSS feed
+
+**Alternative approach for services**:
+```
+content/
+  pl/
+    services/
+      printing/         ← Section, not category
+      document-photos/  ← Section, not category
+```
+
+**Keep these enabled** (never add to disableKinds):
+
+- **sitemap**: Creates `sitemap.xml` for Google/Bing - critical for SEO
+- **robotsTXT**: Creates `robots.txt` to control search engine crawling - SEO essential
+- **404**: Creates custom 404 error page - better user experience
+
+**All three are small files that provide essential functionality**
+
+---
+
 ## Multilingual Configuration
 
 ### defaultContentLanguage
@@ -853,4 +902,4 @@ git commit -m "config: backup before changes"
 
 - [configuration.md](../admin/configuration.md) - Detailed parameter documentation
 - [hugo-structure.md](hugo-structure.md) - Hugo directory structure
-- [project-manifest.md](project-manifest.md) - package.json explanation
+- [package-json-project-manifest.md](package-json-project-manifest.md) - package.json explanation
