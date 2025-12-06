@@ -1,0 +1,20 @@
+[home]
+other = "Головна"
+
+[about]
+other = "Про нас"
+
+[services]
+other = "Послуги"
+
+[contact]
+other = "Контакт"
+
+[language]
+other = "Мова"
+
+[phone]
+other = "Телефон"
+
+[allRightsReserved]
+other = "Всі права захищені."

@@ -1,0 +1,20 @@
+[home]
+other = "Home"
+
+[about]
+other = "About"
+
+[services]
+other = "Services"
+
+[contact]
+other = "Contact"
+
+[language]
+other = "Language"
+
+[phone]
+other = "Phone"
+
+[allRightsReserved]
+other = "All rights reserved."

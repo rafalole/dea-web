@@ -1,0 +1,20 @@
+[home]
+other = "Strona główna"
+
+[about]
+other = "O nas"
+
+[services]
+other = "Usługi"
+
+[contact]
+other = "Kontakt"
+
+[language]
+other = "Język"
+
+[phone]
+other = "Telefon"
+
+[allRightsReserved]
+other = "Wszelkie prawa zastrzeżone."
