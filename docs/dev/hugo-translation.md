@@ -16,6 +16,8 @@ Hugo's system for managing translations across multiple languages.
 
 ## Language Configuration vs i18n Files
 
+**Note:** For URL structure and multilingual setup, see `docs/dev/hugo-multilingual.md`
+
 ### Two Translation Systems
 
 Hugo has **two separate systems** for multilingual content:
@@ -588,3 +590,4 @@ mkdir -p content/de
 
 - [hugo-toml-config.md](hugo-toml-config.md) - Language configuration
 - [Hugo i18n Documentation](https://gohugo.io/functions/i18n/)
+- [Configure languages](https://gohugo.io/configuration/languages/)

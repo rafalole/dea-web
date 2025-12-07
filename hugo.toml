@@ -3,7 +3,6 @@ defaultContentLanguage = 'pl'
 theme = ''  # We'll build custom theme
 
 # Disable taxonomies (categories/tags) and RSS - not needed for portfolio site
-# Only needed if adding blog posts or filterable content
 disableKinds = ['taxonomy', 'term', 'RSS']
 
 # Shared parameters (language-independent)
