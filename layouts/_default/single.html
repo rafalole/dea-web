@@ -1,0 +1,17 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+{{ define "description" }}{{ .Params.description }}{{ end }}
+
+{{ define "main" }}
+<div class="container mx-auto px-4 py-16">
+  <h1 class="text-4xl font-bold mb-8">{{ .Title }}</h1>
+  <article class="max-w-4xl">
+    <style>
+      article h2 { font-size: 1.875rem; font-weight: bold; margin-top: 2rem; margin-bottom: 1rem; }
+      article ul { list-style-type: disc; margin-left: 2rem; margin-top: 1rem; margin-bottom: 1rem; }
+      article li { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+      article p { margin-top: 1rem; margin-bottom: 1rem; line-height: 1.75; }
+    </style>
+    {{ .Content }}
+  </article>
+</div>
+{{ end }}

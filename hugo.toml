@@ -1,4 +1,4 @@
-baseURL = 'https://deaprint.pl/'
+baseURL = '/'
 defaultContentLanguage = 'pl'
 theme = ''  # We'll build custom theme
 
@@ -19,6 +19,7 @@ email = 'deaprint.kasia@gmail.com'
     languageCode = 'pl'
     languageName = 'Polski'
     weight = 1
+    contentDir = 'content/pl'
     title = 'DeaPrint - Profesjonalna Fotografia'
     [languages.pl.params]
       description = 'Profesjonalne usługi fotograficzne we Wrocławiu. Zdjęcia do dokumentów, wydruki, fotoksiążki i kalendarze.'
@@ -27,6 +28,7 @@ email = 'deaprint.kasia@gmail.com'
     languageCode = 'en'
     languageName = 'English'
     weight = 2
+    contentDir = 'content/en'
     title = 'DeaPrint - Professional Photography'
     [languages.en.params]
       description = 'Professional photography services in Wrocław. Document photos, prints, photobooks, and calendars.'
@@ -35,6 +37,7 @@ email = 'deaprint.kasia@gmail.com'
     languageCode = 'uk'
     languageName = 'Українська'
     weight = 3
+    contentDir = 'content/uk'
     title = 'DeaPrint - Професійна Фотографія'
     [languages.uk.params]
       description = 'Професійні фотопослуги у Вроцлаві. Фото на документи, друк, фотокниги та календарі.'
