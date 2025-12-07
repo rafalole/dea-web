@@ -1,10 +1,9 @@
 ---
-title: "About DeaPrint"
-description: "Learn about Kasia and DeaPrint photography studio in Wrocław"
-translationKey: about
+title: "Hi, I'm Kasia!"
+translationKey: kasia_5
+weight: 1
+draft: false
 ---
-
-## Hi, I'm Kasia!
 
 I've been taking photos for years, and honestly? I love what I do.
 
@@ -17,15 +16,3 @@ Don't just take my word for it—check out my 5.0-star Google reviews. Happy cli
 Oh, and one more thing: I always have candy on hand. You know, for emergencies. 🍬
 
 Let's capture your moment!
-
-## Our Studio
-
-Located in the heart of Wrocław at Warmińska 20/47, our studio offers a comfortable environment for all your photography needs.
-
-## Why Choose Us
-
-- Professional equipment
-- Years of experience
-- Friendly atmosphere
-- Competitive prices
-- Quick turnaround
