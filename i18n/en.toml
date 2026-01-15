@@ -25,47 +25,47 @@ other = "Contact Us"
 [ourServices]
 other = "Our Services"
 
-[documentPhotos]
-other = "Document Photos"
-
-[documentPhotosDesc]
-other = "Professional photos for passports, IDs, and visas"
-
-[hqPrints]
-other = "High-Quality Prints and Scans"
-
-[hqPrintsSubtitle]
-other = "HQ express prints on-site • HQ Prints in Photo Labs"
-
-[hqPrintsDesc]
-other = "Professional printing and document scanning services"
-
-[photobooks]
-other = "Photobooks"
-
-[photobooksDesc]
-other = "Personalized photobooks with your memories"
-
-[photoCalendars]
-other = "Photo Calendars"
-
-[photoCalendarsDesc]
-other = "Custom calendars with your photos for every month"
-
-[photoRenovation]
-other = "Photo Renovation"
-
-[photoRenovationSubtitle]
-other = "Other photo services"
-
-[photoRenovationDesc]
-other = "Restoration and repair of old or damaged photos"
-
-[vhsAndSlides]
-other = "Ripping VHS and Scanning Slides"
-
-[vhsAndSlidesDesc]
-other = "Convert VHS tapes and slides to digital format"
-
 [learnMore]
 other = "Learn More"
+
+[featured]
+other = "Featured"
+
+[features]
+other = "Features"
+
+[backToServices]
+other = "Back to Services"
+
+[toggleTheme]
+other = "Toggle Theme"
+
+[contactInfo]
+other = "Contact Information"
+
+[address]
+other = "Address"
+
+[email]
+other = "Email"
+
+[sendMessage]
+other = "Send Message"
+
+[name]
+other = "Name"
+
+[yourName]
+other = "Your name"
+
+[yourEmail]
+other = "Your email"
+
+[message]
+other = "Message"
+
+[yourMessage]
+other = "Your message"
+
+[send]
+other = "Send"

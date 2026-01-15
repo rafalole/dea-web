@@ -69,3 +69,45 @@ other = "Конвертація VHS-касет і слайдів у цифров
 
 [learnMore]
 other = "Дізнатися більше"
+
+[featured]
+other = "Рекомендовано"
+
+[features]
+other = "Особливості"
+
+[backToServices]
+other = "Повернутися до послуг"
+
+[toggleTheme]
+other = "Перемкнути тему"
+
+[contactInfo]
+other = "Контактна інформація"
+
+[address]
+other = "Адреса"
+
+[email]
+other = "Email"
+
+[sendMessage]
+other = "Надіслати повідомлення"
+
+[name]
+other = "Ім'я"
+
+[yourName]
+other = "Ваше ім'я"
+
+[yourEmail]
+other = "Ваш email"
+
+[message]
+other = "Повідомлення"
+
+[yourMessage]
+other = "Ваше повідомлення"
+
+[send]
+other = "Надіслати"

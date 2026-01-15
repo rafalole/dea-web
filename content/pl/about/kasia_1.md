@@ -2,7 +2,7 @@
 title: "O Kasi"
 translationKey: kasia_1
 weight: 20
-draft: false
+draft: true
 ---
 
 Z wieloletnim doświadczeniem za obiektywem, Kasia uwiecznia chwile, które się liczą. Jej praca mówi sama za siebie—klienci oceniają jej usługi na 5.0 gwiazdek w Google Reviews.

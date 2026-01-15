@@ -5,8 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
   <meta name="description" content='{{ block "description" . }}{{ .Site.Params.description }}{{ end }}'>
-  {{ $css := resources.Get "css/main.css" | css.PostCSS }}
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          typography: {
+            DEFAULT: {
+              css: {
+                maxWidth: 'none',
+              },
+            },
+          },
+        },
+      },
+      plugins: [],
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .prose ul { list-style-type: disc; margin-left: 1.5em; }
+      .prose ol { list-style-type: decimal; margin-left: 1.5em; }
+      .prose li { margin-top: 0.25em; margin-bottom: 0.25em; }
+      .prose strong { font-weight: 700; }
+      .prose em { font-style: italic; }
+      .prose h2 { font-size: 1.5em; font-weight: 700; margin-top: 1em; margin-bottom: 0.5em; }
+      .prose p { margin-top: 0.5em; margin-bottom: 0.5em; }
+    }
+  </style>
+  <script>
+    const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  </script>
 </head>
 <body>
   {{ partial "header.html" . }}
@@ -14,5 +45,14 @@
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const newTheme = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+  </script>
 </body>
 </html>

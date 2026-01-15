@@ -1,0 +1,82 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+{{ define "description" }}{{ .Description }}{{ end }}
+
+{{ define "main" }}
+<section class="py-16">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <h1 class="text-4xl font-bold text-center mb-4">{{ .Title }}</h1>
+    
+    {{ with .Content }}
+      <div class="prose max-w-none text-center mb-12">
+        {{ . }}
+      </div>
+    {{ end }}
+
+    <div class="grid grid-cols-1 {{ if .Params.showForm }}md:grid-cols-2{{ end }} gap-8">
+      <!-- Contact Information -->
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title">{{ i18n "contactInfo" }}</h2>
+          
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-semibold">{{ i18n "address" }}</h3>
+              <p>{{ .Site.Params.address }}</p>
+            </div>
+            
+            <div>
+              <h3 class="font-semibold">{{ i18n "phone" }}</h3>
+              <p><a href='tel:{{ .Site.Params.phone }}' class="link">{{ .Site.Params.phone }}</a></p>
+            </div>
+            
+            <div>
+              <h3 class="font-semibold">{{ i18n "email" }}</h3>
+              <p><a href='mailto:{{ .Site.Params.email }}' class="link">{{ .Site.Params.email }}</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{ if .Params.showForm }}
+      <!-- Contact Form -->
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title">{{ i18n "sendMessage" }}</h2>
+          
+          <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+            <input type="hidden" name="access_key" value='{{ .Site.Params.web3formsKey }}'>
+            <input type="hidden" name="subject" value="New Contact Form Submission">
+            <input type="hidden" name="redirect" value='{{ .Site.BaseURL }}{{ .RelPermalink }}?success=true'>
+            
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">{{ i18n "name" }}</span>
+              </label>
+              <input type="text" name="name" placeholder='{{ i18n "yourName" }}' class="input input-bordered" required />
+            </div>
+            
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">{{ i18n "email" }}</span>
+              </label>
+              <input type="email" name="email" placeholder='{{ i18n "yourEmail" }}' class="input input-bordered" required />
+            </div>
+            
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">{{ i18n "message" }}</span>
+              </label>
+              <textarea name="message" class="textarea textarea-bordered h-24" placeholder='{{ i18n "yourMessage" }}' required></textarea>
+            </div>
+            
+            <div class="form-control">
+              <button type="submit" class="btn btn-primary">{{ i18n "send" }}</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DaisyUI Accordion Demo - Fixed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="p-8 bg-base-200">
+<div class="max-w-4xl mx-auto">
+  <h1 class="text-4xl font-bold mb-8 text-center">DaisyUI Accordion Examples (Working)</h1>
+
+  <!-- Basic Accordion - Fixed with w-full -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4">Basic Accordion</h2>
+    <div class="collapse bg-base-100 border border-base-300">
+      <input type="radio" name="demo1" class="w-full" checked />
+      <div class="collapse-title font-semibold">How do I create an account?</div>
+      <div class="collapse-content">
+        <p>Click the "Sign Up" button in the top right corner and follow the registration process.</p>
+      </div>
+    </div>
+    <div class="collapse bg-base-100 border border-base-300">
+      <input type="radio" name="demo1" class="w-full" />
+      <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+      <div class="collapse-content">
+        <p>Click on "Forgot Password" on the login page and follow the instructions sent to your email.</p>
+      </div>
+    </div>
+    <div class="collapse bg-base-100 border border-base-300">
+      <input type="radio" name="demo1" class="w-full" />
+      <div class="collapse-title font-semibold">How do I update my profile information?</div>
+      <div class="collapse-content">
+        <p>Go to "My Account" settings and select "Edit Profile" to make changes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Arrow Accordion -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4">Arrow Icons</h2>
+    <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+      <input type="radio" name="demo2" class="w-full" checked />
+      <div class="collapse-title font-semibold">How do I create an account?</div>
+      <div class="collapse-content">
+        <p>Click the "Sign Up" button in the top right corner and follow the registration process.</p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+      <input type="radio" name="demo2" class="w-full" />
+      <div class="collapse-title font-semibold">I forgot my password?</div>
+      <div class="collapse-content">
+        <p>Click "Forgot Password" and check your email.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details Version - Always Works -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4">Details (SEO-Friendly)</h2>
+    <details class="collapse collapse-arrow bg-base-100 border border-base-300" open>
+      <summary class="collapse-title font-semibold">Details Example</summary>
+      <div class="collapse-content">
+        <p>No radio inputs needed; native browser support.</p>
+      </div>
+    </details>
+  </section>
+</div>
+</body>
+</html>

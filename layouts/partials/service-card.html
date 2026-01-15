@@ -1,0 +1,21 @@
+<div class="card bg-base-100 shadow-xl{{ if .Params.featured }} ring-2 ring-primary{{ end }}">
+  <div class="card-body">
+    <h3 class="card-title">{{ .Title }}</h3>
+    {{ with .Params.subtitle }}
+      <p class="text-sm opacity-70">{{ . }}</p>
+    {{ end }}
+    {{ with .Params.description }}
+      <p>{{ . }}</p>
+    {{ end }}
+    {{ with .Params.features }}
+      <ul class="list-disc list-inside space-y-1">
+        {{ range . }}
+          <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    {{ end }}
+    <div class="card-actions justify-end">
+      <a href='{{ .RelPermalink }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
+    </div>
+  </div>
+</div>

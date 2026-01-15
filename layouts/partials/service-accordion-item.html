@@ -1,0 +1,31 @@
+
+
+<div class="collapse collapse-arrow bg-base-100 border border-base-300">
+  <input type="radio" name="services-accordion" {{ if eq .Weight 1 }}checked="checked"{{ end }} />
+  <div class="collapse-title font-semibold">
+    {{ .Title }}
+    {{ if .Params.featured }}
+      <span class="badge badge-primary badge-sm ml-2">{{ i18n "featured" }}</span>
+    {{ end }}
+    {{ with .Params.subtitle }}
+      <span class="text-sm opacity-70 font-normal ml-2">{{ . }}</span>
+    {{ end }}
+  </div>
+  <div class="collapse-content text-sm">
+    {{ with .Params.description }}
+      <p class="mb-3">{{ . }}</p>
+    {{ end }}
+    {{ with .Params.features }}
+      <ul class="list-disc list-inside space-y-1">
+        {{ range . }}
+          <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    {{ end }}
+    {{ with .Content }}
+      <div class="prose prose-sm max-w-none mt-3">
+        {{ . }}
+      </div>
+    {{ end }}
+  </div>
+</div>

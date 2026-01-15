@@ -25,47 +25,47 @@ other = "Skontaktuj się"
 [ourServices]
 other = "Nasze Usługi"
 
-[documentPhotos]
-other = "Zdjęcia do Dokumentów"
-
-[documentPhotosDesc]
-other = "Profesjonalne zdjęcia do paszportów, dowodów i wiz"
-
-[hqPrints]
-other = "Wysokiej Jakości Wydruki i Skany"
-
-[hqPrintsSubtitle]
-other = "Ekspresowe wydruki na miejscu • Wydruki w laboratoriach fotograficznych"
-
-[hqPrintsDesc]
-other = "Profesjonalne wydruki i skanowanie dokumentów"
-
-[photobooks]
-other = "Fotoksiążki"
-
-[photobooksDesc]
-other = "Spersonalizowane fotoksiążki z Twoimi wspomnieniami"
-
-[photoCalendars]
-other = "Kalendarze Fotograficzne"
-
-[photoCalendarsDesc]
-other = "Niestandardowe kalendarze ze zdjęciami na każdy miesiąc"
-
-[photoRenovation]
-other = "Renowacja Zdjęć"
-
-[photoRenovationSubtitle]
-other = "Inne usługi fotograficzne"
-
-[photoRenovationDesc]
-other = "Przywracanie i naprawa starych lub uszkodzonych zdjęć"
-
-[vhsAndSlides]
-other = "Digitalizacja VHS i Slajdów"
-
-[vhsAndSlidesDesc]
-other = "Konwersja kaset VHS i slajdów do formatu cyfrowego"
-
 [learnMore]
 other = "Dowiedz się więcej"
+
+[featured]
+other = "Polecane"
+
+[features]
+other = "Cechy"
+
+[backToServices]
+other = "Powrót do usług"
+
+[toggleTheme]
+other = "Przełącz motyw"
+
+[contactInfo]
+other = "Informacje kontaktowe"
+
+[address]
+other = "Adres"
+
+[email]
+other = "Email"
+
+[sendMessage]
+other = "Wyślij wiadomość"
+
+[name]
+other = "Imię"
+
+[yourName]
+other = "Twoje imię"
+
+[yourEmail]
+other = "Twój email"
+
+[message]
+other = "Wiadomość"
+
+[yourMessage]
+other = "Twoja wiadomość"
+
+[send]
+other = "Wyślij"

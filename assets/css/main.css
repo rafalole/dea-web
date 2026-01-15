@@ -1,7 +1,17 @@
 @import "tailwindcss";
-@plugin "daisyui";
 
-@theme {
-  --color-primary: #3b82f6;
-  --color-secondary: #8b5cf6;
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+  root: ":root";
+  include: *;
+  exclude: ;
+  prefix: ;
+  logs: true;
+}
+
+/* Ensure base styles are included */
+@layer base {
+  html {
+    @apply antialiased;
+  }
 }

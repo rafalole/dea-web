@@ -13,8 +13,13 @@
         <li><a href='{{ relLangURL "about" }}'>{{ i18n "about" }}</a></li>
         <li><a href='{{ relLangURL "services" }}'>{{ i18n "services" }}</a></li>
         <li><a href='{{ relLangURL "contact" }}'>{{ i18n "contact" }}</a></li>
-        <li>
       </ul>
+      <!-- Theme Switcher -->
+      <button onclick="toggleTheme()" class="btn btn-ghost btn-circle" aria-label="Toggle theme">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </button>
       <!-- Language Switcher -->
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost">
@@ -41,6 +46,7 @@
           <li><a href='{{ relLangURL "about" }}'>{{ i18n "about" }}</a></li>
           <li><a href='{{ relLangURL "services" }}'>{{ i18n "services" }}</a></li>
           <li><a href='{{ relLangURL "contact" }}'>{{ i18n "contact" }}</a></li>
+          <li><button onclick="toggleTheme()" class="justify-start">{{ i18n "toggleTheme" }}</button></li>
           <li class="menu-title">{{ i18n "language" }}</li>
           {{ range .Translations }}
             <li><a href='{{ .RelPermalink }}'>{{ .Language.LanguageName }}</a></li>

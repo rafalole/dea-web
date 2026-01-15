@@ -19,62 +19,9 @@
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-12">{{ i18n "ourServices" }}</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h3 class="card-title">{{ i18n "documentPhotos" }}</h3>
-          <p>{{ i18n "documentPhotosDesc" }}</p>
-          <div class="card-actions justify-end">
-            <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h3 class="card-title">{{ i18n "hqPrints" }}</h3>
-          <p class="text-sm opacity-70">{{ i18n "hqPrintsSubtitle" }}</p>
-          <p>{{ i18n "hqPrintsDesc" }}</p>
-          <div class="card-actions justify-end">
-            <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h3 class="card-title">{{ i18n "photobooks" }}</h3>
-          <p>{{ i18n "photobooksDesc" }}</p>
-          <div class="card-actions justify-end">
-            <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h3 class="card-title">{{ i18n "photoCalendars" }}</h3>
-          <p>{{ i18n "photoCalendarsDesc" }}</p>
-          <div class="card-actions justify-end">
-            <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h3 class="card-title">{{ i18n "photoRenovation" }}</h3>
-          <p class="text-sm opacity-70">{{ i18n "photoRenovationSubtitle" }}</p>
-          <p>{{ i18n "photoRenovationDesc" }}</p>
-          <div class="card-actions justify-end">
-            <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h3 class="card-title">{{ i18n "vhsAndSlides" }}</h3>
-          <p>{{ i18n "vhsAndSlidesDesc" }}</p>
-          <div class="card-actions justify-end">
-            <a href='{{ relLangURL "services" }}' class="btn btn-primary">{{ i18n "learnMore" }}</a>
-          </div>
-        </div>
-      </div>
+      {{ range where (where .Site.RegularPages "Section" "services") "Draft" false | first 100 }}
+        {{ partial "service-card.html" . }}
+      {{ end }}
     </div>
   </div>
 </section>
